@@ -59,6 +59,8 @@ class Character
 		void SetPlayerGender();
 
 		void SetPlayerAdditionalInformtion();
+		
+		void SetCharacterClass();
 };
 
 class Exit

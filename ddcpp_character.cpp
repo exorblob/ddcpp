@@ -50,6 +50,9 @@ void Character::GenerateNew()
 			case 11:
 				SetPlayerAdditionalInformtion();
 				break;
+			case 12:
+				SetCharacterClass();
+				break;
 		}
 
 		while (Correct == false)
@@ -318,4 +321,22 @@ void Character::SetPlayerAdditionalInformtion()
 		Correct = UserInput.ValidateInput(Input);
 	}
 	PlayerAdditionalInformation = Input;
+}
+
+void Character::SetCharacterClass()
+{
+	cout << "You may choose from the following class types:" << endl << endl;
+	
+	cout << "1. Cleric" << endl
+	     << "2. Druid" << endl
+	     << "3. Fighter" << endl
+	     << "4. Paladin" << endl
+	     << "5. Ranger" << endl
+	     << "6. Magic-user" << endl
+	     << "7. Illusionist" << endl
+	     << "8. thief" << endl
+	     << "9. Assasin" << endl
+	     << "10. Monk" << endl;
+	     
+	cout << "type the class name you would like to pick" << endl;
 }
