@@ -8,7 +8,7 @@ void Character::GenerateNew()
 	bool Continue = true;
 	bool Correct = false;
 	
-	int part = 12;
+	int part = 1;
 	int Choice = 0;
 	
 	while (Continue == true) {
@@ -559,7 +559,7 @@ void Character::SetCharacterAlignment()
 				Correct = false;
 			}
 		}
-		cout << "it made it out alright" << temp1 << temp2 << endl;
+
 		if (CharacterClass.compare("cleric") == 0){
 			if (temp1 == "neutral" && temp2 == "neutral") {
 				Correct = false;
