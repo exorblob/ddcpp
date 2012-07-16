@@ -373,9 +373,7 @@ void Character::SetCharacterRace()
 					  << "6. HalfOrc" << endl
 					  << "7. Human" << endl;
 			}
-			else if(CharacterClass.compare("paladin") == 0) {
-				cout << "1. Human" << endl;
-			}
+			else if(CharacterClass.compare("paladin") == 0) { cout << "1. Human" << endl; }
 			else if(CharacterClass.compare("ranger") == 0) {	
 				cout << "1. HalfElven" << endl
 					  << "2. Human" << endl;
@@ -406,9 +404,7 @@ void Character::SetCharacterRace()
 					  << "5. HalfOrc" << endl
 					  << "6. Human" << endl;
 			}
-			else if(CharacterClass.compare("monk") == 0) {
-				cout << "1. Human" << endl;
-			}
+			else if(CharacterClass.compare("monk") == 0) { cout << "1. Human" << endl; }
 	
 			cout << "What race would you like to be?" << endl << endl;
 
@@ -550,34 +546,28 @@ void Character::SetCharacterAlignment()
 				found++;
 				temp2.append(Input,found,Input.size());
 			}
-			if (temp1 == "lawful" || temp1 == "chaotic" || temp1 == "neutral"){
-				Correct == true;
-			}
-			else
-			{
+			if (temp1 == "lawful" || temp1 == "chaotic" || temp1 == "neutral"){ Correct == true; }
+			else {
 				cout << "your lawful/chaotic choice was incompatible please try again" << endl;
 				Correct = false;
 			}
 			if (temp2 == "good" || temp2 == "evil" || temp2 == "neutral"){
 				Correct = true;
 			}
-			else 
-			{
+			else {
 				cout << "your good/evil choice was incompatible please try again" << endl;
 				Correct = false;
 			}
 		}
 		cout << "it made it out alright" << temp1 << temp2 << endl;
 		if (CharacterClass.compare("cleric") == 0){
-			if (temp1 == "neutral" && temp2 == "neutral")
-			{
+			if (temp1 == "neutral" && temp2 == "neutral") {
 				Correct = false;
 				cout <<"wrong try again" << endl;
 			}
 		}
-		else if (CharacterClass.compare("druid") == 0){
-			if (temp1 != "neutral" || temp2 != "neutral")
-			{
+		else if (CharacterClass.compare("druid") == 0) {
+			if (temp1 != "neutral" || temp2 != "neutral") {
 				Correct = false;
 				cout << "wrong try again" << endl;
 			}
