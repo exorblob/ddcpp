@@ -562,27 +562,24 @@ void Character::SetCharacterAlignment()
 
 		if (CharacterClass.compare("cleric") == 0){
 			if (temp1 == "neutral" && temp2 == "neutral") {
-				Correct = true;
-				cout <<"Clerics are not really supposed to be true neutral." << endl;
+				Correct = false;
+				cout <<"wrong try again" << endl;
 			}
 		}
 		else if (CharacterClass.compare("druid") == 0) {
 			if (temp1 != "neutral" || temp2 != "neutral") {
-				Correct = true;
-				cout << "Druid are really supposed to be true neutral" << endl;
+				Correct = false;
+				cout << "wrong try again" << endl;
 			}
 		}
 		else if (CharacterClass.compare("fighter") == 0){
 			
 		}
 		else if (CharacterClass.compare("paladin") == 0){
-			if (temp1 == "chaotic") {
-				Correct == true;
-				cout << "Paladins are really supposed to be lawful" << endl;
-			}
+		
 		}
 		else if (CharacterClass.compare("ranger") == 0){
-			
+		
 		}
 		else if (CharacterClass.compare("magicuser") == 0){
 		
