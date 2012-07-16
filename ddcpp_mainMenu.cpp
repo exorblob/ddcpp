@@ -8,8 +8,7 @@ int MainMenu::GetUserOption()
 	
 	int Choice = 0;
 	
-	while (Correct == false)
-	{
+	while (Correct == false) {
 		cout << "Select the option you would like by typing the corresponding number and pressing enter" << endl;
 		
 		cout << "1. Generate new character" << endl
@@ -21,7 +20,6 @@ int MainMenu::GetUserOption()
 		Choice = UserInput.GetInt(5);	
 		
 		Correct = UserInput.ValidateInput(Choice);
-	}
-	
+	}	
 	return Choice;
 }

@@ -10,34 +10,17 @@ int main()
 	
 	int Choice = 0;
 	
-	while (Running == true)
-	{
+	while (Running == true) {
 		int Option = 0;
 		
 		Choice = MainMenu.GetUserOption();
 		
-		if (Choice == 1)
-		{
-			Character.GenerateNew();
-		}
-		if (Choice == 3)
-		{
-			
-		}
-		if (Choice == 3)
-		{
-			
-		}
-		if (Choice == 4)
-		{
-			
-		}
-		if (Choice == 5)
-		{
-						
-			if (Exit.Exiting() == false)
-			{	
-						
+		if (Choice == 1){ Character.GenerateNew(); }
+		if (Choice == 3) { }
+		if (Choice == 3) { }
+		if (Choice == 4) { }
+		if (Choice == 5) {			
+			if (Exit.Exiting() == false) {			
 				Running = false;
 			}
 		}
