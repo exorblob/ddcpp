@@ -526,9 +526,14 @@ void Character::SetCharacterAlignment()
 	
 	size_t found;
 	
+	int Choice = 0;
+	
 	while (Correct == false) {
 		while (Correct == false) {
 			Correct = false;
+			string Input = "";
+			string temp1 = "";	
+			string temp2 = "";
 			
 			cout << endl << "Enter your desired alignment. if it is not allowed for the class you chose" << endl
 			     << "the program will let you know. the format for entering alignment" << endl
@@ -569,7 +574,7 @@ void Character::SetCharacterAlignment()
 		else if (CharacterClass.compare("druid") == 0) {
 			if (temp1 != "neutral" || temp2 != "neutral") {
 				Correct = true;
-				cout << "Druid are really supposed to be true neutral" << endl;
+				cout << "Druids are really supposed to be true neutral" << endl;
 			}
 		}
 		else if (CharacterClass.compare("fighter") == 0){
@@ -582,7 +587,10 @@ void Character::SetCharacterAlignment()
 			}
 		}
 		else if (CharacterClass.compare("ranger") == 0){
-			
+			if (temp2 == "evil") {
+				Correct = true;
+				cout << "Rangers should really be good characters" << endl;
+			}
 		}
 		else if (CharacterClass.compare("magicuser") == 0){
 		
@@ -591,13 +599,43 @@ void Character::SetCharacterAlignment()
 		
 		}
 		else if (CharacterClass.compare("thief") == 0){
-		
+			if (temp1 == "lawful" && temp2 == "good"){
+				Correct = true;
+				cout << "Thiefs really shouldn't be lawfull good" << endl;}
 		}
 		else if (CharacterClass.compare("assassin") == 0){
-		
+			if (temp2 != "evil") {
+				Correct = true;
+				cout << "Assassins really should be evil characters" << endl;
+			}
 		}
 		else if (CharacterClass.compare("monk") == 0){
+			if (temp1 == "chaotic") {
+				Correct = true;
+				cout << "Monks really should be lawfull characters" << endl;
+			}
+		}
 		
+		while (Correct == true) {
+			cout << "Would you like to change your alignment choice?" << endl;
+			cout << "Yes = 1 No = 2" << endl;
+			
+			Choice = UserInput.GetInt(2);
+			Correct = UserInput.ValidateInput(Choice);
+						
+			if (Correct == true){
+				Correct = false;
+			}
+			else {
+				Correct = true;
+			}
+		}
+		
+		if (Choice == 1){
+			Correct = false;
+		}
+		else if (Choice == 2){
+			Correct = true;
 		}
 	}
 }
