@@ -573,7 +573,7 @@ void Character::SetCharacterAlignment()
 			}
 		}
 		else if (CharacterClass.compare("fighter") == 0){
-		
+			
 		}
 		else if (CharacterClass.compare("paladin") == 0){
 		
