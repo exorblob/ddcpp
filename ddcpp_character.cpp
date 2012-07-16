@@ -609,3 +609,28 @@ void Character::SetCharacterAlignment()
 		}
 	}
 }
+
+void SetCharacterAbilityScoresMain()
+{
+	
+}
+
+void SetCharacterAbilityScoresMethodOne()
+{
+	
+}
+		
+void SetCharacterAbilityScoresMethodTwo()
+{
+	
+}
+		
+void SetCharacterAbilityScoresMethodThree()
+{
+	
+}
+		
+void SetCharacterAbilityScoresMethodFour()
+{
+	
+}

@@ -21,11 +21,16 @@ class Character
 		string PlayerPhysicalAddress;
 		string PlayerPostalAddress;
 		int PlayerModeOfTransportaion;
-		bool PlayerHasInternetAccess;
-		string PlayerGender;
+		bool PlayerHasInternetAccess;;
 		string PlayerAdditionalInformation;
 		string CharacterClass;
 		string CharacterRace;
+		int CharacterStrength;
+		int CharacterIntelligence;
+		int CharacterWisdom;
+		int CharacterDexterity;
+		int CharacterConstitution;
+		int CharacterCharisma;
 		
 	public:
 	
@@ -40,11 +45,15 @@ class Character
 		void SetPlayerPostalAddress();
 		void SetPlayerModeOfTransportation();
 		void SetPlayerHasInternetAccess();
-		void SetPlayerGender();
 		void SetPlayerAdditionalInformtion();
 		void SetCharacterClass();
 		void SetCharacterRace();
 		void SetCharacterAlignment();
+		void SetCharacterAbilityScoresMain();
+		void SetCharacterAbilityScoresMethodOne();
+		void SetCharacterAbilityScoresMethodTwo();
+		void SetCharacterAbilityScoresMethodThree();
+		void SetCharacterAbilityScoresMethodFour();
 };
 
 class Exit
