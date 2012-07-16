@@ -43,19 +43,16 @@ void Character::GenerateNew()
 				SetPlayerHasInternetAccess();
 				break;
 			case 10:
-				SetPlayerGender();
-				break;
-			case 11:
 				SetPlayerAdditionalInformtion();
 				break;
-			case 12:
+			case 11:
 				SetCharacterClass();
 				break;
-			case 13:
+			case 12:
 				SetCharacterRace();
-			case 14:
+			case 13:
 				SetCharacterAlignment();
-			case 15:
+			case 14:
 				Continue = false;
 				Correct = true;
 		}
@@ -243,33 +240,6 @@ void Character::SetPlayerHasInternetAccess()
 	
 	if (Choice == 1) { PlayerHasInternetAccess = true; }
 	else if (Choice == 2) { PlayerHasInternetAccess = false; }
-}
-
-void Character::SetPlayerGender()
-{
-	UserInput UserInput;
-	
-	string Input = "";
-	
-	bool Correct = false;
-	
-	cout << "What is your gender?" << endl;
-	cout << "type Male or Female" << endl;
-	
-	while (Correct == false) {
-		Input = UserInput.GetString();
-		
-		Correct = UserInput.ValidateInput(Input);
-	
-		if (Input.compare("Male") == 0) { PlayerGender = Input; }
-		else if (Input.compare("male") == 0) { PlayerGender = Input; }
-		else if (Input.compare("Female") == 0) { PlayerGender = Input; }
-		else if (Input.compare("female") == 0) { PlayerGender = Input; }
-		else {
-			cout << "Please enter a real gender with correct spelling." << endl; 
-			Correct = false;
-		}
-	}
 }
 
 void Character::SetPlayerAdditionalInformtion()
