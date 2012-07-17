@@ -53,6 +53,8 @@ void Character::GenerateNew()
 			case 13:
 				SetCharacterAlignment();
 			case 14:
+				SetCharacterAbilityScoresMain();	
+			case 15:
 				Continue = false;
 				Correct = true;
 		}
@@ -610,27 +612,74 @@ void Character::SetCharacterAlignment()
 	}
 }
 
-void SetCharacterAbilityScoresMain()
+void Character::SetCharacterAbilityScoresMain()
 {
+	UserInput UserInput;
 	
+	bool Correct = false;
+	
+	int Choice = 0;
+	
+	while (Correct == false){
+		Choice = 0;
+	
+		cout << "there are four differnet ways to generate ability scores." << endl
+			  << "Ask your DM wich He/She want s you to use when generating your character." << endl
+			  << endl << endl;
+		cout << "In method 1 you roll 4d6 and keep the highest 3 values." << endl
+		 	  << "you do this six times to generate your ability scores." << endl
+		 	  << "you may then arrange them as you would like." << endl << endl;
+		cout << "In method 2 you roll 3d6 twelve times keeping" << endl
+		     << "the best six results. you may then arrange them" << endl
+		     << "as you would like." << endl << endl;
+		cout << "In method 3 you roll 3d6 six times for each ability score." << endl
+			  << "keeping the best result for each ability" << endl << endl;
+		cout << "In method 4 you roll 3d6 one for each ability score." << endl
+			  << "you do this enough times to generate twelve characters." << endl 
+			  << "you may then pick the best one." << endl << endl;
+	
+		cout << "wich method would you like to use? type the number" << endl
+			  << "corresponding to the method you re DM has decided to use" << endl;
+	
+		Choice = UserInput.GetInt(4);
+		Correct = UserInput.ValidateInput(Choice);
+	}
+	
+	switch (Choice)
+	{
+		case 1:
+			SetCharacterAbilityScoresMethodOne();
+			break;
+		case 2:
+			SetCharacterAbilityScoresMethodTwo();
+			break;
+		case 3:
+			SetCharacterAbilityScoresMethodThree();
+			break;
+		case 4:
+			SetCharacterAbilityScoresMethodFour();
+			break;
+		default:
+			break;
+	}
 }
 
-void SetCharacterAbilityScoresMethodOne()
+void Character::SetCharacterAbilityScoresMethodOne()
 {
-	
+	cout << "Method one entered" << endl;
 }
 		
-void SetCharacterAbilityScoresMethodTwo()
+void Character::SetCharacterAbilityScoresMethodTwo()
 {
-	
+	cout << "Mehtod two entered" << endl;
 }
 		
-void SetCharacterAbilityScoresMethodThree()
+void Character::SetCharacterAbilityScoresMethodThree()
 {
-	
+	cout << "Method three entered" << endl;
 }
 		
-void SetCharacterAbilityScoresMethodFour()
+void Character::SetCharacterAbilityScoresMethodFour()
 {
-	
+	cout << "Method four entered" << endl;
 }
