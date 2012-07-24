@@ -666,7 +666,12 @@ void Character::SetCharacterAbilityScoresMain()
 
 void Character::SetCharacterAbilityScoresMethodOne()
 {
+	
+	int scores [6];
 	cout << "Method one entered" << endl;
+	
+	cout << "the program will now roll the dice to generate your ability scores." << endl;
+
 }
 		
 void Character::SetCharacterAbilityScoresMethodTwo()
